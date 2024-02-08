@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import styles from "./button.module.css";
 
-interface Props {
+interface ButtonProps {
   type: string;
   link: string;
 }
 
-const Button = ({ type, link }: Props) => {
+const Button = ({ type, link }: ButtonProps) => {
   console.log(type);
 
   return (

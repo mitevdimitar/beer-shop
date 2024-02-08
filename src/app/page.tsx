@@ -1,12 +1,12 @@
 "use client";
 
 import Button from "@/components/button";
-import useFetchData from "../services/firebase";
+import { useFetchProducts } from "../hooks";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const { data, loading } = useFetchData();
+  const { data, loading } = useFetchProducts();
 
   useEffect(() => {
     console.log(data);
