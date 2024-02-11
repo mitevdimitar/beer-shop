@@ -1,0 +1,62 @@
+[debug] [2024-02-11T11:59:00.564Z] ----------------------------------------------------------------------
+[debug] [2024-02-11T11:59:00.566Z] Command:       /Users/dimitarmitev/.nvm/versions/node/v18.17.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-02-11T11:59:00.567Z] CLI Version:   11.25.1
+[debug] [2024-02-11T11:59:00.567Z] Platform:      darwin
+[debug] [2024-02-11T11:59:00.567Z] Node Version:  v18.17.0
+[debug] [2024-02-11T11:59:00.569Z] Time:          Sun Feb 11 2024 13:59:00 GMT+0200 (Eastern European Standard Time)
+[debug] [2024-02-11T11:59:00.569Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-11T11:59:00.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-11T11:59:00.632Z] > authorizing via signed-in user (mitev.dimitar@gmail.com)
+[debug] [2024-02-11T11:59:00.632Z] [iam] checking project beer-shop-645d2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-11T11:59:00.634Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions [none]
+[debug] [2024-02-11T11:59:00.634Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions x-goog-quota-user=projects/beer-shop-645d2
+[debug] [2024-02-11T11:59:00.635Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-11T11:59:01.655Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions 200
+[debug] [2024-02-11T11:59:01.655Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-11T11:59:01.657Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/beer-shop-645d2 [none]
+[debug] [2024-02-11T11:59:01.938Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/beer-shop-645d2 200
+[debug] [2024-02-11T11:59:01.939Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/beer-shop-645d2 {"projectId":"beer-shop-645d2","projectNumber":"525712788181","displayName":"beer-shop","name":"projects/beer-shop-645d2","resources":{"hostingSite":"beer-shop-645d2","realtimeDatabaseInstance":"beer-shop-645d2-default-rtdb"},"state":"ACTIVE","etag":"1_5dc6b886-7669-4fd2-a44e-687442945311"}
+[debug] [2024-02-11T11:59:03.584Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/beer-shop-645d2/sites pageToken=&pageSize=10
+[debug] [2024-02-11T11:59:04.811Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/beer-shop-645d2/sites 200
+[debug] [2024-02-11T11:59:04.811Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/beer-shop-645d2/sites {"sites":[{"name":"projects/beer-shop-645d2/sites/beer-shop-645d2","defaultUrl":"https://beer-shop-645d2.web.app","appId":"1:525712788181:web:cd36e4a0a05ea3ef32f05c","type":"DEFAULT_SITE"}]}
+[debug] [2024-02-11T11:59:04.812Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:525712788181:web:cd36e4a0a05ea3ef32f05c/config [none]
+[debug] [2024-02-11T11:59:05.542Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:525712788181:web:cd36e4a0a05ea3ef32f05c/config 200
+[debug] [2024-02-11T11:59:05.542Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:525712788181:web:cd36e4a0a05ea3ef32f05c/config {"projectId":"beer-shop-645d2","appId":"1:525712788181:web:cd36e4a0a05ea3ef32f05c","databaseURL":"https://beer-shop-645d2-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"beer-shop-645d2.appspot.com","apiKey":"AIzaSyDsJ0ETvr-Snv5hiYFTHXXZ5eI8EJgPVDo","authDomain":"beer-shop-645d2.firebaseapp.com","messagingSenderId":"525712788181","measurementId":"G-LPQM10ZVZJ"}
+[debug] [2024-02-11T11:59:21.452Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (/Users/dimitarmitev/.config/yarn/global/node_modules/firebase-tools/lib/frameworks/next/index.js:206:56)
+    at async prepareFrameworks (/Users/dimitarmitev/.config/yarn/global/node_modules/firebase-tools/lib/frameworks/index.js:269:13)
+    at async deploy (/Users/dimitarmitev/.config/yarn/global/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-02-11T12:09:32.423Z] ----------------------------------------------------------------------
+[debug] [2024-02-11T12:09:32.425Z] Command:       /Users/dimitarmitev/.nvm/versions/node/v18.17.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-02-11T12:09:32.425Z] CLI Version:   11.25.1
+[debug] [2024-02-11T12:09:32.425Z] Platform:      darwin
+[debug] [2024-02-11T12:09:32.426Z] Node Version:  v18.17.0
+[debug] [2024-02-11T12:09:32.427Z] Time:          Sun Feb 11 2024 14:09:32 GMT+0200 (Eastern European Standard Time)
+[debug] [2024-02-11T12:09:32.427Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-11T12:09:32.486Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-11T12:09:32.487Z] > authorizing via signed-in user (mitev.dimitar@gmail.com)
+[debug] [2024-02-11T12:09:32.487Z] [iam] checking project beer-shop-645d2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-11T12:09:32.489Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions [none]
+[debug] [2024-02-11T12:09:32.489Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions x-goog-quota-user=projects/beer-shop-645d2
+[debug] [2024-02-11T12:09:32.489Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-11T12:09:33.597Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions 200
+[debug] [2024-02-11T12:09:33.597Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/beer-shop-645d2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-11T12:09:33.599Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/beer-shop-645d2 [none]
+[debug] [2024-02-11T12:09:33.931Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/beer-shop-645d2 200
+[debug] [2024-02-11T12:09:33.931Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/beer-shop-645d2 {"projectId":"beer-shop-645d2","projectNumber":"525712788181","displayName":"beer-shop","name":"projects/beer-shop-645d2","resources":{"hostingSite":"beer-shop-645d2","realtimeDatabaseInstance":"beer-shop-645d2-default-rtdb"},"state":"ACTIVE","etag":"1_5dc6b886-7669-4fd2-a44e-687442945311"}
+[debug] [2024-02-11T12:09:35.639Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/beer-shop-645d2/sites pageToken=&pageSize=10
+[debug] [2024-02-11T12:09:37.278Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/beer-shop-645d2/sites 200
+[debug] [2024-02-11T12:09:37.278Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/beer-shop-645d2/sites {"sites":[{"name":"projects/beer-shop-645d2/sites/beer-shop-645d2","defaultUrl":"https://beer-shop-645d2.web.app","appId":"1:525712788181:web:cd36e4a0a05ea3ef32f05c","type":"DEFAULT_SITE"}]}
+[debug] [2024-02-11T12:09:37.279Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:525712788181:web:cd36e4a0a05ea3ef32f05c/config [none]
+[debug] [2024-02-11T12:09:38.001Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:525712788181:web:cd36e4a0a05ea3ef32f05c/config 200
+[debug] [2024-02-11T12:09:38.002Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:525712788181:web:cd36e4a0a05ea3ef32f05c/config {"projectId":"beer-shop-645d2","appId":"1:525712788181:web:cd36e4a0a05ea3ef32f05c","databaseURL":"https://beer-shop-645d2-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"beer-shop-645d2.appspot.com","apiKey":"AIzaSyDsJ0ETvr-Snv5hiYFTHXXZ5eI8EJgPVDo","authDomain":"beer-shop-645d2.firebaseapp.com","messagingSenderId":"525712788181","measurementId":"G-LPQM10ZVZJ"}
+[debug] [2024-02-11T12:09:55.642Z] TypeError: Cannot read properties of null (reading 'endsWith')
+    at ɵcodegenPublicDirectory (/Users/dimitarmitev/.config/yarn/global/node_modules/firebase-tools/lib/frameworks/next/index.js:206:56)
+    at async prepareFrameworks (/Users/dimitarmitev/.config/yarn/global/node_modules/firebase-tools/lib/frameworks/index.js:269:13)
+    at async deploy (/Users/dimitarmitev/.config/yarn/global/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
